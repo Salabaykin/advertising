@@ -1,47 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  // About Us Swiper
-  const aboutusSlide = document.querySelectorAll('.aboutus-slider.swiper-container .swiper-slide');
-  if (document.documentElement.clientWidth > 991) {
-    var aboutusSwiper = new Swiper('.aboutus-slider.swiper-container', {
-      allowTouchMove: false,
-      spaceBetween: 15,
-      slidesPerView: 4
-    });
-  } else {
-    var aboutusSwiper = new Swiper('.aboutus-slider.swiper-container', {
-      speed: 400,
-      spaceBetween: 15,
+  var configurationProblemsSwiper = new Swiper('.configuration-problems-slider.swiper-container', {
+    spaceBetween: 50,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  })
+
+  const costSlide = document.querySelectorAll('.articles__tabs.swiper-container .swiper-slide');
+  if (costSlide.length <= 3 && document.documentElement.clientWidth < 991) {
+    var configurationProblemsSwiper = new Swiper('.cost-slider.swiper-container', {
+      slidesPerView: 3,
       pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-        991: {
-          slidesPerView: 4,
-          loop: false
-        },
-        768: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-          loopFillGroupWithBlank: true,
-          loop: true
-        },
-        576: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          loopFillGroupWithBlank: true,
-          loop: true
-        },
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-          loopFillGroupWithBlank: true,
-          loop: true
-        }
+        clickable: true,
       }
-    });
+    })
+  } else {
+    var configurationProblemsSwiper = new Swiper('.cost-slider.swiper-container', {
+      slidesPerView: 3,
+      simulateTouch: false
+    })
   }
 
 });

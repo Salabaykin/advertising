@@ -1,0 +1,52 @@
+.cost
+    margin-top: 90px
+    &__wrapper
+        margin-top: 40px
+    &-item
+        margin-right: 15px
+        margin-left: 15px
+        padding-bottom: 1px
+        box-shadow: 0 17px 17px rgba(0, 0, 0, 0.15)
+        border-radius: 10px
+        background-color: #ffffff
+        &__head
+            height: 70px
+            border-radius: 10px 10px 0 0
+            background-color: $second
+            display: flex
+            align-items: center
+            justify-content: center
+            span 
+                color: #ffffff
+                font-size: 30px
+                font-weight: 800
+        &__list
+            padding: 30px 15px 30px 15px
+            ul.mark-list 
+                li 
+                    padding-left: 24px
+                    color: $txt-color
+                li::before
+                    content: '—'
+                    font-weight: 600
+                    color: $second
+                    background: none 
+        &__price
+            padding: 25px 15px 
+            border-top: 1px solid $second
+            border-bottom: 1px solid $second
+            text-align: center
+            span 
+                font-size: 30px
+                font-weight: 600
+        &__bottom
+            margin-top: 30px
+            margin-bottom: 30px
+            padding: 0 15px
+    &-slider 
+        margin-left: -15px
+        margin-right: -15px
+        padding-bottom: 70px
+
+
+
