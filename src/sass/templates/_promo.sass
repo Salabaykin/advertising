@@ -1,11 +1,39 @@
 .promo
-    height: 681px
-    background: url('../images/promo-bg.png')
-    background-size: 100%
-    background-repeat: no-repeat 
+    position: relative
+    background: rgb(47,102,166)
+    background: linear-gradient(60deg, rgba(47,102,166,1) 0%, rgba(87,212,210,1) 100%)
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        height: 30px
+        background: url('../images/promo-line-bg.svg')
+        background-size: 100%
+        background-repeat: no-repeat 
+        z-index: 10
     &__wrapper 
-        padding-top: 125px
+        position: relative
+        //display: flex
+        //justify-content: space-between
+    &__img
+        position: absolute
+        bottom: 0
+        right: -70px
+        //margin-right: -70px
+        width: 48%
+        //height: 665px
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+        z-index: 5
+        img 
+            max-width: 100%
     &-content
+        padding-top: 120px
+        padding-bottom: 150px
         width: 58%
         &__title 
             color: #ffffff
@@ -14,3 +42,42 @@
         &__list
             margin-top: 45px
             margin-bottom: 55px
+
+
+@media ( max-width: 1330px )
+    .promo__img
+        right: -40px
+
+@media ( max-width: 1280px )
+    .promo__img
+        right: 0
+        width: 40%
+    .promo-content
+        width: 55%
+        padding-top: 80px
+        padding-bottom: 110px
+    .promo-content__title 
+        font-size: 47px
+    
+@media ( max-width: 991px )
+    .promo
+        padding-top: 90px
+    .promo__img
+        display: none
+    .promo-content
+        width: 100%
+
+@media ( max-width: 768px )
+    .promo-content__title
+        font-size: 30px
+    .promo-content
+        padding: 50px 0 70px 0
+    .promo-content__list
+        margin: 30px 0
+
+@media ( max-width: 576px )
+    .promo__button
+        width: 100%
+        padding: 20px
+    .promo::before 
+        height: 15px

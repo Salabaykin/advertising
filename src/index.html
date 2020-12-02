@@ -14,6 +14,13 @@
 
                 <div class="header-top">
 
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- /.burger-menu -->
+
                     <div class="logo">
                         <div class="logo__img">
                             <img src="images/logo.png" alt="Logo">
@@ -25,6 +32,10 @@
                         </div>
                     </div>
                     <!-- /.logo -->
+
+                    <div class="header-top__mail">
+                        <img src="images/icons/phone-call.svg" alt="phone-call">
+                    </div>
 
                     <div class="header-contacts contacts">
                         <div class="contacts-item contacts-item--mail">
@@ -54,7 +65,7 @@
 
                 <nav class="header-bottom nav">
                     <ul>
-                        <li class="nav__list"><a href="#" class="nav__link">Главная Услуги</a></li>
+                        <li class="nav__list"><a href="#" class="nav__link">Главная</a></li>
                         <li class="nav__list"><a href="#" class="nav__link">Агенство</a></li>
                         <li class="nav__list"><a href="#" class="nav__link">Услуги</a></li>
                         <li class="nav__list"><a href="#" class="nav__link">Тарифы и цены</a></li>
@@ -88,6 +99,11 @@
                     <button class="button promo__button">Получить предложение</button>
                 </div>
                 <!-- /.promo-content -->
+
+                <div class="promo__img">
+                    <img src="images/promo-girl.png" alt="girl">
+                </div>
+                <!-- /.promo__img -->
 
             </div>
             <!-- /.promo__wrapper -->
@@ -147,7 +163,12 @@
     <!-- /.contextual-advertising -->
 
     <section class="about-us">
-        <div class="container">
+
+        <div class="about-us__img">
+            <img src="/images/about-us-man.png" alt="">
+        </div>
+
+        <div class="container about-us-container">
             <div class="about-us__wrapper">
 
                 <h2 class="about-us__title">О нашем агентстве</h2>
@@ -625,6 +646,38 @@
         <!-- /.container -->
     </footer>
     <!-- /.footer -->
+
+    <div class="modal" id="modal">
+        <div class="modal__window">
+
+            <div class="modal__content">
+                <button class="modal-close">&#10006;</button>
+                <div class="modal__title">Оставить заявку</div>
+                <div class="modal__body">
+                    <form action="#" class="modal-form">
+                        <div class="modal-form__item">
+                            <input type="text" class="modal-form__input" placeholder="ФИО">
+                        </div>
+                        <div class="modal-form__item">
+                            <input type="email" class="modal-form__input" placeholder="E-mail">
+                        </div>
+                        <div class="modal-form__item">
+                            <input type="tel" class="modal-form__input" placeholder="Номер телефона">
+                        </div>
+                        <div class="modal-form__submit">
+                            <button class="button button-w100 modal-form__button">Оставить заявку</button>
+                        </div>
+                        <div class="modal-form__conf">
+                            Нажима на кнопку “Оставить заявку” я даю согласие на обработку  персональных данных
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal__content -->
+
+        </div>
+    </div>
+    <!-- /.modal -->
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="js/swiper-bundle.min.js"></script>

@@ -1,22 +1,25 @@
 .about-us
     position: relative
     margin-top: 120px
-    min-height: 616px
     background-color: #0074b1
     background-image: linear-gradient(-51deg, #55d0d1 0%, #316ca9 100%)
-    &::before
-        content: ''
+    &-container
+        display: flex
+        justify-content: flex-end
+    &__wrapper
+        padding: 55px 0
+        padding-top: 35px
+        width: calc(100vw / 2.4)
+    &__img
         position: absolute
         bottom: 0
         left: 0
-        width: 636px
+        display: flex
+        align-items: flex-end
+        max-width: 636px
         height: 651px
-        background: url('../images/about-us-man.png')
-        background-size: cover 
-        background-repeat: no-repeat
-    &__wrapper
-        padding: 55px 0
-        padding-left: 335px
+        img 
+            max-width: calc(100vw / 2.4)
     &__title
         color: #ffffff
         font-size: 60px
@@ -29,3 +32,34 @@
             font-size: 23px
             &:last-child
                 margin-bottom: 0
+
+@media ( max-width: 1300px )
+    .about-us__wrapper 
+        width: calc(100vw / 2)
+
+@media ( max-width: 1270px )
+    .about-us__title
+        font-size: 47px
+
+@media ( max-width: 991px )
+    .about-us
+        margin-top: 50px
+    .about-us__img
+        display: none
+    .about-us__wrapper 
+        width: 100%
+        padding: 40px 0
+    .about-us__title
+        font-size: 30px
+    .about-us__text p 
+        margin-bottom: 23px
+
+@media ( max-width: 768px )
+    .about-us__title
+        font-size: 24px
+    .about-us__text
+        margin-top: 25px
+    .about-us__text p 
+        font-size: 16px
+    
+

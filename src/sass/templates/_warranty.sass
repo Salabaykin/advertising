@@ -8,8 +8,10 @@
         margin-top: 40px
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
     &-item
         width: 25%
+        padding: 0 10px
         display: flex
         flex-direction: column
         align-items: center
@@ -37,3 +39,22 @@
             line-height: 24px
             text-align: center
                 
+
+@media ( max-width: 991px )
+    .warranty
+        margin-top: 50px
+        padding: 40px 0
+    .warranty-item
+        width: 50%
+        margin-bottom: 30px
+    .warranty__wrapper
+        margin-top: 30px
+    .warranty-item__title
+        font-size: 18px
+    .warranty-item__descr
+        font-size: 14px
+
+@media ( max-width: 768px )
+    .warranty-item__circle
+        width: 113px
+        height: 113px

@@ -1,0 +1,89 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    overflow: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    flex-flow: column nowrap
+    align-items: center
+    justify-content: flex-start
+    margin: auto
+    z-index: 99
+    &__window
+        padding: 30px 15px
+        flex-shrink: 0
+        flex-grow: 0
+        width: 100%
+        min-height: 100%
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        justify-content: center
+        background: rgba(0,0,0,0.8)
+    &__content
+        position: relative
+        padding: 70px 55px
+        background: #ffffff
+        border-radius: 10px
+        max-width: 655px
+    &-close
+        position: absolute
+        top: 5px
+        right: 5px
+        width: 50px
+        height: 50px
+        background: transparent 
+        border: none 
+        margin: 0
+        padding: 0
+        text-align: center
+        color: $main
+        font-size: 35px
+        line-height: 1
+        cursor: pointer
+    &__title
+        margin-bottom: 50px
+        text-align: center
+        font-size: 48px
+        font-weight: 800
+        text-transform: uppercase
+    &-form
+        &__item
+            margin-bottom: 10px
+        &__input
+            width: 100%
+            padding: 24px 40px
+            border-radius: 30px
+            border: 1px solid #cdcdcd
+            background-color: #ffffff
+            font-family: 'Gilroy', sans-serif
+            color: rgba(#1c1c1c, 0.5)
+            font-size: 16px
+            font-weight: 500
+        &__conf
+            margin-top: 20px
+            color: (#1c1c1c, 0.7)
+            font-size: 16px
+            font-weight: 500
+            text-align: center
+
+.modal.open
+    display: flex
+
+
+@media ( max-width: 991px )
+    .modal__title
+        font-size: 24px
+    .modal__content
+        padding: 30px
+    
+@media ( max-width: 768px )
+    .modal__content
+        padding: 45px 10px
+    .modal-close
+        top: 0
+        right: 0

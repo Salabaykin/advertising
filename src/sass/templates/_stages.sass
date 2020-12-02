@@ -32,6 +32,7 @@
                 line-height: 1
         &__txt
             margin-left: 22px
+            padding-right: 10px
         &__title
             font-size: 18px
             font-weight: 700
@@ -41,3 +42,30 @@
             font-weight: 400
             line-height: 24px
 
+
+@media ( max-width: 991px )
+    .stages
+        margin-top: 50px
+    .stages-item 
+        width: 50%
+
+@media ( max-width: 768px )
+    .stages-item 
+        width: 100%
+        margin-bottom: 30px
+    .stages-item__descr
+        font-size: 14px
+    .stages-item__num
+        width: 45px
+        min-width: 45px
+        height: 45px
+        span 
+            font-size: 24px
+    .stages-item__txt
+        margin-left: 15px
+    .stages__descr
+        font-size: 14px
+
+@media ( max-width: 576px )
+    .stages__button
+        width: 100%
