@@ -7,6 +7,20 @@
         margin-right: 10px
         &:last-child
             margin-right: 0
+        a 
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                bottom: 23px
+                left: 0
+                width: 0
+                height: 3px
+                background: $main
+                transition: width 0.2s
+            &:hover
+                &::after
+                    width: 100%
     &__link 
         display: block
         padding: 30px 0
@@ -17,6 +31,8 @@
 @media ( max-width: 991px )
     .nav 
         display: none
+    .nav__list a::after
+        bottom: 15px
     .nav.active 
         display: block
         position: fixed

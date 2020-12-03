@@ -35,28 +35,51 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Menu 
-  const navHeader = document.querySelector('.nav'),
-        burgerMenu = document.querySelector('.burger-menu');
+  const navBar = {
+    navHeader: document.querySelector('.nav'),
+    burgerMenu: document.querySelector('.burger-menu'),
+    toggleNav: function() {
+      navBar.burgerMenu.classList.toggle('active');
+      navBar.navHeader.classList.toggle('active');
+    }
+  }
 
-  burgerMenu.addEventListener('click', function() {
-    burgerMenu.classList.toggle('active');
-    navHeader.classList.toggle('active');
-    document.body.classList.toggle('hidden');
+  navBar.burgerMenu.addEventListener('click', function() {
+    navBar.toggleNav();
   });
 
   // Modal 
-  const modal = document.getElementById('modal'),
-        buttonModalOpen = document.querySelectorAll('.button'),
-        modalClose = document.querySelector('.modal-close');
- 
-  buttonModalOpen.forEach(item => {
+  const modal = {
+    modal: document.getElementById('modal'),
+    buttonModalOpen: document.querySelectorAll('.button'),
+    modalClose: document.querySelector('.modal-close'),
+    html: document.documentElement,
+    marginSize: function() {
+      return (window.innerWidth - document.documentElement.clientWidth);
+    },
+    modalWindow: document.querySelector('.modal__window'),
+    closeModal: function() {
+      modal.modal.classList.remove('open');
+      modal.html.style.marginRight = "";
+      document.body.classList.remove('hidden');
+    },
+    openModal: function() {
+      modal.modal.classList.add('open');
+      if (modal.marginSize()) {
+        modal.html.style.marginRight = modal.marginSize() + "px";
+      } 
+      document.body.classList.add('hidden');
+    } 
+  }
+
+  modal.modalClose.addEventListener('click', function() {
+    modal.closeModal();
+  });
+
+  modal.buttonModalOpen.forEach(item => {
     item.addEventListener('click', () => {
-      modal.classList.toggle('open');
+      modal.openModal();
     });
   });
-
-  modalClose.addEventListener('click', () => {
-    modal.classList.toggle('open');
-  });
-
+  
 });
